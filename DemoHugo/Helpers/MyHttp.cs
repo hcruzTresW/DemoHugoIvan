@@ -83,7 +83,7 @@ namespace DemoHugo.Helpers
             try
             {
                 //IProgressDialog dialog = UserDialogs.Instance.Loading("Cargando ...", null, null, true, MaskType.Clear);
-                string urlRest = $"{URL("0")}";
+                string urlRest = $"{URL("1")}";
                 HttpResponseMessage response = await httpClient.GetAsync(urlRest);
                 var resultado = response.Content.ReadAsStringAsync();
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -116,9 +116,9 @@ namespace DemoHugo.Helpers
             try
             {
                 //IProgressDialog dialog = UserDialogs.Instance.Loading("Cargando ...", null, null, true, MaskType.Clear);
-                string urlRest = $"{URL("0")}";
+                string urlRest = $"{URL("2")}";
                 HttpResponseMessage response = await httpClient.GetAsync(urlRest);
-                var resultado = response.Content.ReadAsStringAsync();
+                string responseBody = await response.Content.ReadAsStringAsync();
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     return JsonConvert.DeserializeObject<UpComing>(

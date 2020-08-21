@@ -5,15 +5,13 @@ using System.Text;
 namespace DemoHugo.Models
 {
    public class UpComing
-    {
-        public class Rootobject
-        {
+    {     
             public Result[] results { get; set; }
             public int page { get; set; }
             public int total_results { get; set; }
             public Dates dates { get; set; }
             public int total_pages { get; set; }
-        }
+        
 
         public class Dates
         {
